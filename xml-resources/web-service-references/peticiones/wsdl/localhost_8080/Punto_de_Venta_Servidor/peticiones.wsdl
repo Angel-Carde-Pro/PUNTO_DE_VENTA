@@ -4,23 +4,89 @@
 <xsd:import namespace="http://ws/" schemaLocation="http://localhost:8080/Punto_de_Venta_Servidor/peticiones?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="listarUsuarios">
-<part name="parameters" element="tns:listarUsuarios"/>
+<message name="hello">
+<part name="parameters" element="tns:hello"/>
 </message>
-<message name="listarUsuariosResponse">
-<part name="parameters" element="tns:listarUsuariosResponse"/>
+<message name="helloResponse">
+<part name="parameters" element="tns:helloResponse"/>
 </message>
-<message name="listarPersonas">
-<part name="parameters" element="tns:listarPersonas"/>
+<message name="listarProveedores">
+<part name="parameters" element="tns:listarProveedores"/>
 </message>
-<message name="listarPersonasResponse">
-<part name="parameters" element="tns:listarPersonasResponse"/>
+<message name="listarProveedoresResponse">
+<part name="parameters" element="tns:listarProveedoresResponse"/>
 </message>
-<message name="loginUsuario">
-<part name="parameters" element="tns:loginUsuario"/>
+<message name="registrarTipoPago">
+<part name="parameters" element="tns:registrarTipoPago"/>
 </message>
-<message name="loginUsuarioResponse">
-<part name="parameters" element="tns:loginUsuarioResponse"/>
+<message name="registrarTipoPagoResponse">
+<part name="parameters" element="tns:registrarTipoPagoResponse"/>
+</message>
+<message name="registrarProveedorYClasificacion">
+<part name="parameters" element="tns:registrarProveedorYClasificacion"/>
+</message>
+<message name="registrarProveedorYClasificacionResponse">
+<part name="parameters" element="tns:registrarProveedorYClasificacionResponse"/>
+</message>
+<message name="registrarCompetenciaRol">
+<part name="parameters" element="tns:registrarCompetenciaRol"/>
+</message>
+<message name="registrarCompetenciaRolResponse">
+<part name="parameters" element="tns:registrarCompetenciaRolResponse"/>
+</message>
+<message name="registrarUsuarioPersonaRol">
+<part name="parameters" element="tns:registrarUsuarioPersonaRol"/>
+</message>
+<message name="registrarUsuarioPersonaRolResponse">
+<part name="parameters" element="tns:registrarUsuarioPersonaRolResponse"/>
+</message>
+<message name="registrarFacturaConItems">
+<part name="parameters" element="tns:registrarFacturaConItems"/>
+</message>
+<message name="registrarFacturaConItemsResponse">
+<part name="parameters" element="tns:registrarFacturaConItemsResponse"/>
+</message>
+<message name="listarroles">
+<part name="parameters" element="tns:listarroles"/>
+</message>
+<message name="listarrolesResponse">
+<part name="parameters" element="tns:listarrolesResponse"/>
+</message>
+<message name="listarProductos">
+<part name="parameters" element="tns:listarProductos"/>
+</message>
+<message name="listarProductosResponse">
+<part name="parameters" element="tns:listarProductosResponse"/>
+</message>
+<message name="loginUsuario2">
+<part name="parameters" element="tns:loginUsuario2"/>
+</message>
+<message name="loginUsuario2Response">
+<part name="parameters" element="tns:loginUsuario2Response"/>
+</message>
+<message name="listartipospagos">
+<part name="parameters" element="tns:listartipospagos"/>
+</message>
+<message name="listartipospagosResponse">
+<part name="parameters" element="tns:listartipospagosResponse"/>
+</message>
+<message name="buscarRuc">
+<part name="parameters" element="tns:buscarRuc"/>
+</message>
+<message name="buscarRucResponse">
+<part name="parameters" element="tns:buscarRucResponse"/>
+</message>
+<message name="siexisteComp">
+<part name="parameters" element="tns:siexisteComp"/>
+</message>
+<message name="siexisteCompResponse">
+<part name="parameters" element="tns:siexisteCompResponse"/>
+</message>
+<message name="siexisterol">
+<part name="parameters" element="tns:siexisterol"/>
+</message>
+<message name="siexisterolResponse">
+<part name="parameters" element="tns:siexisterolResponse"/>
 </message>
 <message name="buscarP">
 <part name="parameters" element="tns:buscarP"/>
@@ -34,84 +100,146 @@
 <message name="crearProductoResponse">
 <part name="parameters" element="tns:crearProductoResponse"/>
 </message>
+<message name="loginUsuario">
+<part name="parameters" element="tns:loginUsuario"/>
+</message>
+<message name="loginUsuarioResponse">
+<part name="parameters" element="tns:loginUsuarioResponse"/>
+</message>
+<message name="listarUsuarios">
+<part name="parameters" element="tns:listarUsuarios"/>
+</message>
+<message name="listarUsuariosResponse">
+<part name="parameters" element="tns:listarUsuariosResponse"/>
+</message>
 <message name="registrarrol">
 <part name="parameters" element="tns:registrarrol"/>
 </message>
 <message name="registrarrolResponse">
 <part name="parameters" element="tns:registrarrolResponse"/>
 </message>
-<message name="listarProveedores">
-<part name="parameters" element="tns:listarProveedores"/>
+<message name="listarPersonas">
+<part name="parameters" element="tns:listarPersonas"/>
 </message>
-<message name="listarProveedoresResponse">
-<part name="parameters" element="tns:listarProveedoresResponse"/>
+<message name="listarPersonasResponse">
+<part name="parameters" element="tns:listarPersonasResponse"/>
 </message>
-<message name="registrarProveedorYClasificacion">
-<part name="parameters" element="tns:registrarProveedorYClasificacion"/>
+<message name="buscarClasificacionporNombre">
+<part name="parameters" element="tns:buscarClasificacionporNombre"/>
 </message>
-<message name="registrarProveedorYClasificacionResponse">
-<part name="parameters" element="tns:registrarProveedorYClasificacionResponse"/>
+<message name="buscarClasificacionporNombreResponse">
+<part name="parameters" element="tns:buscarClasificacionporNombreResponse"/>
 </message>
-<message name="registrarUsuarioPersonaRol">
-<part name="parameters" element="tns:registrarUsuarioPersonaRol"/>
+<message name="registrarProveedor">
+<part name="parameters" element="tns:registrarProveedor"/>
 </message>
-<message name="registrarUsuarioPersonaRolResponse">
-<part name="parameters" element="tns:registrarUsuarioPersonaRolResponse"/>
+<message name="registrarProveedorResponse">
+<part name="parameters" element="tns:registrarProveedorResponse"/>
 </message>
-<message name="registrarCompetenciaRol">
-<part name="parameters" element="tns:registrarCompetenciaRol"/>
+<message name="buscarProveedorporRUC">
+<part name="parameters" element="tns:buscarProveedorporRUC"/>
 </message>
-<message name="registrarCompetenciaRolResponse">
-<part name="parameters" element="tns:registrarCompetenciaRolResponse"/>
+<message name="buscarProveedorporRUCResponse">
+<part name="parameters" element="tns:buscarProveedorporRUCResponse"/>
 </message>
-<message name="registrarTipoPago">
-<part name="parameters" element="tns:registrarTipoPago"/>
+<message name="buscarProveedorporRUCObjeto">
+<part name="parameters" element="tns:buscarProveedorporRUCObjeto"/>
 </message>
-<message name="registrarTipoPagoResponse">
-<part name="parameters" element="tns:registrarTipoPagoResponse"/>
+<message name="buscarProveedorporRUCObjetoResponse">
+<part name="parameters" element="tns:buscarProveedorporRUCObjetoResponse"/>
 </message>
-<message name="registrarFacturaConItems">
-<part name="parameters" element="tns:registrarFacturaConItems"/>
+<message name="listarclasificacion">
+<part name="parameters" element="tns:listarclasificacion"/>
 </message>
-<message name="registrarFacturaConItemsResponse">
-<part name="parameters" element="tns:registrarFacturaConItemsResponse"/>
+<message name="listarclasificacionResponse">
+<part name="parameters" element="tns:listarclasificacionResponse"/>
 </message>
-<message name="siexisterol">
-<part name="parameters" element="tns:siexisterol"/>
+<message name="buscarProductoPorId">
+<part name="parameters" element="tns:buscarProductoPorId"/>
 </message>
-<message name="siexisterolResponse">
-<part name="parameters" element="tns:siexisterolResponse"/>
+<message name="buscarProductoPorIdResponse">
+<part name="parameters" element="tns:buscarProductoPorIdResponse"/>
 </message>
-<message name="estadorol">
-<part name="parameters" element="tns:estadorol"/>
+<message name="buscarRUCProveedorPorID">
+<part name="parameters" element="tns:buscarRUCProveedorPorID"/>
 </message>
-<message name="estadorolResponse">
-<part name="parameters" element="tns:estadorolResponse"/>
+<message name="buscarRUCProveedorPorIDResponse">
+<part name="parameters" element="tns:buscarRUCProveedorPorIDResponse"/>
 </message>
-<message name="siexisteComp">
-<part name="parameters" element="tns:siexisteComp"/>
+<message name="registrarProductos">
+<part name="parameters" element="tns:registrarProductos"/>
 </message>
-<message name="siexisteCompResponse">
-<part name="parameters" element="tns:siexisteCompResponse"/>
+<message name="registrarProductosResponse">
+<part name="parameters" element="tns:registrarProductosResponse"/>
 </message>
-<message name="hello">
-<part name="parameters" element="tns:hello"/>
+<message name="obtenerTipoPagoPorId">
+<part name="parameters" element="tns:obtenerTipoPagoPorId"/>
 </message>
-<message name="helloResponse">
-<part name="parameters" element="tns:helloResponse"/>
+<message name="obtenerTipoPagoPorIdResponse">
+<part name="parameters" element="tns:obtenerTipoPagoPorIdResponse"/>
+</message>
+<message name="registrarClasificacion">
+<part name="parameters" element="tns:registrarClasificacion"/>
+</message>
+<message name="registrarClasificacionResponse">
+<part name="parameters" element="tns:registrarClasificacionResponse"/>
 </message>
 <portType name="peticiones">
-<operation name="listarUsuarios">
-<input wsam:Action="http://ws/peticiones/listarUsuariosRequest" message="tns:listarUsuarios"/>
-<output wsam:Action="http://ws/peticiones/listarUsuariosResponse" message="tns:listarUsuariosResponse"/>
+<operation name="hello">
+<input wsam:Action="http://ws/peticiones/helloRequest" message="tns:hello"/>
+<output wsam:Action="http://ws/peticiones/helloResponse" message="tns:helloResponse"/>
 </operation>
-<operation name="listarPersonas">
-<input wsam:Action="http://ws/peticiones/listarPersonasRequest" message="tns:listarPersonas"/>
-<output wsam:Action="http://ws/peticiones/listarPersonasResponse" message="tns:listarPersonasResponse"/>
+<operation name="listarProveedores">
+<input wsam:Action="http://ws/peticiones/listarProveedoresRequest" message="tns:listarProveedores"/>
+<output wsam:Action="http://ws/peticiones/listarProveedoresResponse" message="tns:listarProveedoresResponse"/>
 </operation>
-<operation name="loginUsuario">
-<input wsam:Action="http://ws/peticiones/loginUsuarioRequest" message="tns:loginUsuario"/>
-<output wsam:Action="http://ws/peticiones/loginUsuarioResponse" message="tns:loginUsuarioResponse"/>
+<operation name="registrarTipoPago">
+<input wsam:Action="http://ws/peticiones/registrarTipoPagoRequest" message="tns:registrarTipoPago"/>
+<output wsam:Action="http://ws/peticiones/registrarTipoPagoResponse" message="tns:registrarTipoPagoResponse"/>
+</operation>
+<operation name="registrarProveedorYClasificacion">
+<input wsam:Action="http://ws/peticiones/registrarProveedorYClasificacionRequest" message="tns:registrarProveedorYClasificacion"/>
+<output wsam:Action="http://ws/peticiones/registrarProveedorYClasificacionResponse" message="tns:registrarProveedorYClasificacionResponse"/>
+</operation>
+<operation name="registrarCompetenciaRol">
+<input wsam:Action="http://ws/peticiones/registrarCompetenciaRolRequest" message="tns:registrarCompetenciaRol"/>
+<output wsam:Action="http://ws/peticiones/registrarCompetenciaRolResponse" message="tns:registrarCompetenciaRolResponse"/>
+</operation>
+<operation name="registrarUsuarioPersonaRol">
+<input wsam:Action="http://ws/peticiones/registrarUsuarioPersonaRolRequest" message="tns:registrarUsuarioPersonaRol"/>
+<output wsam:Action="http://ws/peticiones/registrarUsuarioPersonaRolResponse" message="tns:registrarUsuarioPersonaRolResponse"/>
+</operation>
+<operation name="registrarFacturaConItems">
+<input wsam:Action="http://ws/peticiones/registrarFacturaConItemsRequest" message="tns:registrarFacturaConItems"/>
+<output wsam:Action="http://ws/peticiones/registrarFacturaConItemsResponse" message="tns:registrarFacturaConItemsResponse"/>
+</operation>
+<operation name="listarroles">
+<input wsam:Action="http://ws/peticiones/listarrolesRequest" message="tns:listarroles"/>
+<output wsam:Action="http://ws/peticiones/listarrolesResponse" message="tns:listarrolesResponse"/>
+</operation>
+<operation name="listarProductos">
+<input wsam:Action="http://ws/peticiones/listarProductosRequest" message="tns:listarProductos"/>
+<output wsam:Action="http://ws/peticiones/listarProductosResponse" message="tns:listarProductosResponse"/>
+</operation>
+<operation name="loginUsuario2">
+<input wsam:Action="http://ws/peticiones/loginUsuario2Request" message="tns:loginUsuario2"/>
+<output wsam:Action="http://ws/peticiones/loginUsuario2Response" message="tns:loginUsuario2Response"/>
+</operation>
+<operation name="listartipospagos">
+<input wsam:Action="http://ws/peticiones/listartipospagosRequest" message="tns:listartipospagos"/>
+<output wsam:Action="http://ws/peticiones/listartipospagosResponse" message="tns:listartipospagosResponse"/>
+</operation>
+<operation name="buscarRuc">
+<input wsam:Action="http://ws/peticiones/buscarRucRequest" message="tns:buscarRuc"/>
+<output wsam:Action="http://ws/peticiones/buscarRucResponse" message="tns:buscarRucResponse"/>
+</operation>
+<operation name="siexisteComp">
+<input wsam:Action="http://ws/peticiones/siexisteCompRequest" message="tns:siexisteComp"/>
+<output wsam:Action="http://ws/peticiones/siexisteCompResponse" message="tns:siexisteCompResponse"/>
+</operation>
+<operation name="siexisterol">
+<input wsam:Action="http://ws/peticiones/siexisterolRequest" message="tns:siexisterol"/>
+<output wsam:Action="http://ws/peticiones/siexisterolResponse" message="tns:siexisterolResponse"/>
 </operation>
 <operation name="buscarP">
 <input wsam:Action="http://ws/peticiones/buscarPRequest" message="tns:buscarP"/>
@@ -121,54 +249,66 @@
 <input wsam:Action="http://ws/peticiones/crearProductoRequest" message="tns:crearProducto"/>
 <output wsam:Action="http://ws/peticiones/crearProductoResponse" message="tns:crearProductoResponse"/>
 </operation>
+<operation name="loginUsuario">
+<input wsam:Action="http://ws/peticiones/loginUsuarioRequest" message="tns:loginUsuario"/>
+<output wsam:Action="http://ws/peticiones/loginUsuarioResponse" message="tns:loginUsuarioResponse"/>
+</operation>
+<operation name="listarUsuarios">
+<input wsam:Action="http://ws/peticiones/listarUsuariosRequest" message="tns:listarUsuarios"/>
+<output wsam:Action="http://ws/peticiones/listarUsuariosResponse" message="tns:listarUsuariosResponse"/>
+</operation>
 <operation name="registrarrol">
 <input wsam:Action="http://ws/peticiones/registrarrolRequest" message="tns:registrarrol"/>
 <output wsam:Action="http://ws/peticiones/registrarrolResponse" message="tns:registrarrolResponse"/>
 </operation>
-<operation name="listarProveedores">
-<input wsam:Action="http://ws/peticiones/listarProveedoresRequest" message="tns:listarProveedores"/>
-<output wsam:Action="http://ws/peticiones/listarProveedoresResponse" message="tns:listarProveedoresResponse"/>
+<operation name="listarPersonas">
+<input wsam:Action="http://ws/peticiones/listarPersonasRequest" message="tns:listarPersonas"/>
+<output wsam:Action="http://ws/peticiones/listarPersonasResponse" message="tns:listarPersonasResponse"/>
 </operation>
-<operation name="registrarProveedorYClasificacion">
-<input wsam:Action="http://ws/peticiones/registrarProveedorYClasificacionRequest" message="tns:registrarProveedorYClasificacion"/>
-<output wsam:Action="http://ws/peticiones/registrarProveedorYClasificacionResponse" message="tns:registrarProveedorYClasificacionResponse"/>
+<operation name="buscarClasificacionporNombre">
+<input wsam:Action="http://ws/peticiones/buscarClasificacionporNombreRequest" message="tns:buscarClasificacionporNombre"/>
+<output wsam:Action="http://ws/peticiones/buscarClasificacionporNombreResponse" message="tns:buscarClasificacionporNombreResponse"/>
 </operation>
-<operation name="registrarUsuarioPersonaRol">
-<input wsam:Action="http://ws/peticiones/registrarUsuarioPersonaRolRequest" message="tns:registrarUsuarioPersonaRol"/>
-<output wsam:Action="http://ws/peticiones/registrarUsuarioPersonaRolResponse" message="tns:registrarUsuarioPersonaRolResponse"/>
+<operation name="registrarProveedor">
+<input wsam:Action="http://ws/peticiones/registrarProveedorRequest" message="tns:registrarProveedor"/>
+<output wsam:Action="http://ws/peticiones/registrarProveedorResponse" message="tns:registrarProveedorResponse"/>
 </operation>
-<operation name="registrarCompetenciaRol">
-<input wsam:Action="http://ws/peticiones/registrarCompetenciaRolRequest" message="tns:registrarCompetenciaRol"/>
-<output wsam:Action="http://ws/peticiones/registrarCompetenciaRolResponse" message="tns:registrarCompetenciaRolResponse"/>
+<operation name="buscarProveedorporRUC">
+<input wsam:Action="http://ws/peticiones/buscarProveedorporRUCRequest" message="tns:buscarProveedorporRUC"/>
+<output wsam:Action="http://ws/peticiones/buscarProveedorporRUCResponse" message="tns:buscarProveedorporRUCResponse"/>
 </operation>
-<operation name="registrarTipoPago">
-<input wsam:Action="http://ws/peticiones/registrarTipoPagoRequest" message="tns:registrarTipoPago"/>
-<output wsam:Action="http://ws/peticiones/registrarTipoPagoResponse" message="tns:registrarTipoPagoResponse"/>
+<operation name="buscarProveedorporRUCObjeto">
+<input wsam:Action="http://ws/peticiones/buscarProveedorporRUCObjetoRequest" message="tns:buscarProveedorporRUCObjeto"/>
+<output wsam:Action="http://ws/peticiones/buscarProveedorporRUCObjetoResponse" message="tns:buscarProveedorporRUCObjetoResponse"/>
 </operation>
-<operation name="registrarFacturaConItems">
-<input wsam:Action="http://ws/peticiones/registrarFacturaConItemsRequest" message="tns:registrarFacturaConItems"/>
-<output wsam:Action="http://ws/peticiones/registrarFacturaConItemsResponse" message="tns:registrarFacturaConItemsResponse"/>
+<operation name="listarclasificacion">
+<input wsam:Action="http://ws/peticiones/listarclasificacionRequest" message="tns:listarclasificacion"/>
+<output wsam:Action="http://ws/peticiones/listarclasificacionResponse" message="tns:listarclasificacionResponse"/>
 </operation>
-<operation name="siexisterol">
-<input wsam:Action="http://ws/peticiones/siexisterolRequest" message="tns:siexisterol"/>
-<output wsam:Action="http://ws/peticiones/siexisterolResponse" message="tns:siexisterolResponse"/>
+<operation name="buscarProductoPorId">
+<input wsam:Action="http://ws/peticiones/buscarProductoPorIdRequest" message="tns:buscarProductoPorId"/>
+<output wsam:Action="http://ws/peticiones/buscarProductoPorIdResponse" message="tns:buscarProductoPorIdResponse"/>
 </operation>
-<operation name="estadorol">
-<input wsam:Action="http://ws/peticiones/estadorolRequest" message="tns:estadorol"/>
-<output wsam:Action="http://ws/peticiones/estadorolResponse" message="tns:estadorolResponse"/>
+<operation name="buscarRUCProveedorPorID">
+<input wsam:Action="http://ws/peticiones/buscarRUCProveedorPorIDRequest" message="tns:buscarRUCProveedorPorID"/>
+<output wsam:Action="http://ws/peticiones/buscarRUCProveedorPorIDResponse" message="tns:buscarRUCProveedorPorIDResponse"/>
 </operation>
-<operation name="siexisteComp">
-<input wsam:Action="http://ws/peticiones/siexisteCompRequest" message="tns:siexisteComp"/>
-<output wsam:Action="http://ws/peticiones/siexisteCompResponse" message="tns:siexisteCompResponse"/>
+<operation name="registrarProductos">
+<input wsam:Action="http://ws/peticiones/registrarProductosRequest" message="tns:registrarProductos"/>
+<output wsam:Action="http://ws/peticiones/registrarProductosResponse" message="tns:registrarProductosResponse"/>
 </operation>
-<operation name="hello">
-<input wsam:Action="http://ws/peticiones/helloRequest" message="tns:hello"/>
-<output wsam:Action="http://ws/peticiones/helloResponse" message="tns:helloResponse"/>
+<operation name="obtenerTipoPagoPorId">
+<input wsam:Action="http://ws/peticiones/obtenerTipoPagoPorIdRequest" message="tns:obtenerTipoPagoPorId"/>
+<output wsam:Action="http://ws/peticiones/obtenerTipoPagoPorIdResponse" message="tns:obtenerTipoPagoPorIdResponse"/>
+</operation>
+<operation name="registrarClasificacion">
+<input wsam:Action="http://ws/peticiones/registrarClasificacionRequest" message="tns:registrarClasificacion"/>
+<output wsam:Action="http://ws/peticiones/registrarClasificacionResponse" message="tns:registrarClasificacionResponse"/>
 </operation>
 </portType>
 <binding name="peticionesPortBinding" type="tns:peticiones">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="listarUsuarios">
+<operation name="hello">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -177,7 +317,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="listarPersonas">
+<operation name="listarProveedores">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -186,7 +326,106 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="loginUsuario">
+<operation name="registrarTipoPago">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="registrarProveedorYClasificacion">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="registrarCompetenciaRol">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="registrarUsuarioPersonaRol">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="registrarFacturaConItems">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarroles">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarProductos">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="loginUsuario2">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listartipospagos">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="buscarRuc">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="siexisteComp">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="siexisterol">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -213,6 +452,24 @@
 <soap:body use="literal"/>
 </output>
 </operation>
+<operation name="loginUsuario">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarUsuarios">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="registrarrol">
 <soap:operation soapAction=""/>
 <input>
@@ -222,7 +479,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="listarProveedores">
+<operation name="listarPersonas">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -231,7 +488,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="registrarProveedorYClasificacion">
+<operation name="buscarClasificacionporNombre">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -240,7 +497,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="registrarUsuarioPersonaRol">
+<operation name="registrarProveedor">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -249,7 +506,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="registrarCompetenciaRol">
+<operation name="buscarProveedorporRUC">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -258,7 +515,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="registrarTipoPago">
+<operation name="buscarProveedorporRUCObjeto">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -267,7 +524,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="registrarFacturaConItems">
+<operation name="listarclasificacion">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -276,7 +533,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="siexisterol">
+<operation name="buscarProductoPorId">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -285,7 +542,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="estadorol">
+<operation name="buscarRUCProveedorPorID">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -294,7 +551,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="siexisteComp">
+<operation name="registrarProductos">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -303,7 +560,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="hello">
+<operation name="obtenerTipoPagoPorId">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="registrarClasificacion">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

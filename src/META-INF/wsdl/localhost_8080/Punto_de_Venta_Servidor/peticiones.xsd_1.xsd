@@ -1,16 +1,36 @@
 <?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.0 (wsit240-7e98ff4; 2017-08-03T21:19:54+0200) JAXWS-RI/2.3.0 JAXWS-API/2.3.0 JAXB-RI/2.3.0 JAXB-API/2.3.0 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws/">
 
+<xs:element name="buscarClasificacionporNombre" type="tns:buscarClasificacionporNombre"/>
+
+<xs:element name="buscarClasificacionporNombreResponse" type="tns:buscarClasificacionporNombreResponse"/>
+
 <xs:element name="buscarP" type="tns:buscarP"/>
 
 <xs:element name="buscarPResponse" type="tns:buscarPResponse"/>
 
+<xs:element name="buscarProductoPorId" type="tns:buscarProductoPorId"/>
+
+<xs:element name="buscarProductoPorIdResponse" type="tns:buscarProductoPorIdResponse"/>
+
+<xs:element name="buscarProveedorporRUC" type="tns:buscarProveedorporRUC"/>
+
+<xs:element name="buscarProveedorporRUCObjeto" type="tns:buscarProveedorporRUCObjeto"/>
+
+<xs:element name="buscarProveedorporRUCObjetoResponse" type="tns:buscarProveedorporRUCObjetoResponse"/>
+
+<xs:element name="buscarProveedorporRUCResponse" type="tns:buscarProveedorporRUCResponse"/>
+
+<xs:element name="buscarRUCProveedorPorID" type="tns:buscarRUCProveedorPorID"/>
+
+<xs:element name="buscarRUCProveedorPorIDResponse" type="tns:buscarRUCProveedorPorIDResponse"/>
+
+<xs:element name="buscarRuc" type="tns:buscarRuc"/>
+
+<xs:element name="buscarRucResponse" type="tns:buscarRucResponse"/>
+
 <xs:element name="crearProducto" type="tns:crearProducto"/>
 
 <xs:element name="crearProductoResponse" type="tns:crearProductoResponse"/>
-
-<xs:element name="estadorol" type="tns:estadorol"/>
-
-<xs:element name="estadorolResponse" type="tns:estadorolResponse"/>
 
 <xs:element name="hello" type="tns:hello"/>
 
@@ -20,6 +40,10 @@
 
 <xs:element name="listarPersonasResponse" type="tns:listarPersonasResponse"/>
 
+<xs:element name="listarProductos" type="tns:listarProductos"/>
+
+<xs:element name="listarProductosResponse" type="tns:listarProductosResponse"/>
+
 <xs:element name="listarProveedores" type="tns:listarProveedores"/>
 
 <xs:element name="listarProveedoresResponse" type="tns:listarProveedoresResponse"/>
@@ -28,9 +52,33 @@
 
 <xs:element name="listarUsuariosResponse" type="tns:listarUsuariosResponse"/>
 
+<xs:element name="listarclasificacion" type="tns:listarclasificacion"/>
+
+<xs:element name="listarclasificacionResponse" type="tns:listarclasificacionResponse"/>
+
+<xs:element name="listarroles" type="tns:listarroles"/>
+
+<xs:element name="listarrolesResponse" type="tns:listarrolesResponse"/>
+
+<xs:element name="listartipospagos" type="tns:listartipospagos"/>
+
+<xs:element name="listartipospagosResponse" type="tns:listartipospagosResponse"/>
+
 <xs:element name="loginUsuario" type="tns:loginUsuario"/>
 
+<xs:element name="loginUsuario2" type="tns:loginUsuario2"/>
+
+<xs:element name="loginUsuario2Response" type="tns:loginUsuario2Response"/>
+
 <xs:element name="loginUsuarioResponse" type="tns:loginUsuarioResponse"/>
+
+<xs:element name="obtenerTipoPagoPorId" type="tns:obtenerTipoPagoPorId"/>
+
+<xs:element name="obtenerTipoPagoPorIdResponse" type="tns:obtenerTipoPagoPorIdResponse"/>
+
+<xs:element name="registrarClasificacion" type="tns:registrarClasificacion"/>
+
+<xs:element name="registrarClasificacionResponse" type="tns:registrarClasificacionResponse"/>
 
 <xs:element name="registrarCompetenciaRol" type="tns:registrarCompetenciaRol"/>
 
@@ -39,6 +87,14 @@
 <xs:element name="registrarFacturaConItems" type="tns:registrarFacturaConItems"/>
 
 <xs:element name="registrarFacturaConItemsResponse" type="tns:registrarFacturaConItemsResponse"/>
+
+<xs:element name="registrarProductos" type="tns:registrarProductos"/>
+
+<xs:element name="registrarProductosResponse" type="tns:registrarProductosResponse"/>
+
+<xs:element name="registrarProveedor" type="tns:registrarProveedor"/>
+
+<xs:element name="registrarProveedorResponse" type="tns:registrarProveedorResponse"/>
 
 <xs:element name="registrarProveedorYClasificacion" type="tns:registrarProveedorYClasificacion"/>
 
@@ -64,6 +120,243 @@
 
 <xs:element name="siexisterolResponse" type="tns:siexisterolResponse"/>
 
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarclasificacion">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listarclasificacionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:clasificacion" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clasificacion">
+<xs:sequence>
+<xs:element name="grupo" type="xs:string" minOccurs="0"/>
+<xs:element name="id_clasificacion" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarPersonas">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listarPersonasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:persona" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="persona">
+<xs:sequence>
+<xs:element name="personas" type="tns:persona" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="apellido" type="xs:string" minOccurs="0"/>
+<xs:element name="celular" type="xs:string" minOccurs="0"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="dni" type="xs:string" minOccurs="0"/>
+<xs:element name="id_persona" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarClasificacion">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarClasificacionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginUsuario2">
+<xs:sequence>
+<xs:element name="nombreUsuario" type="xs:string" minOccurs="0"/>
+<xs:element name="passwordUsuario" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginUsuario2Response">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarClasificacionporNombre">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarClasificacionporNombreResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarProveedorporRUCObjeto">
+<xs:sequence>
+<xs:element name="idProducto" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarProveedorporRUCObjetoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:proveedores" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="proveedores">
+<xs:sequence>
+<xs:element name="clasificacion" type="tns:clasificacion" minOccurs="0"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="id_proveedor" type="xs:int"/>
+<xs:element name="moneda" type="xs:string" minOccurs="0"/>
+<xs:element name="pais" type="xs:string" minOccurs="0"/>
+<xs:element name="ruc" type="xs:string" minOccurs="0"/>
+<xs:element name="telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarCompetenciaRol">
+<xs:sequence>
+<xs:element name="idRol" type="xs:int"/>
+<xs:element name="nombreRol" type="xs:string" minOccurs="0"/>
+<xs:element name="estadoRol" type="xs:boolean"/>
+<xs:element name="idCompetencia" type="xs:int"/>
+<xs:element name="nombreCompetencia" type="xs:string" minOccurs="0"/>
+<xs:element name="estadoCompetencia" type="xs:boolean"/>
+<xs:element name="idClasificacion" type="xs:int"/>
+<xs:element name="grupoClasificacion" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarCompetenciaRolResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listartipospagos">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listartipospagosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tipoPago" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoPago">
+<xs:sequence>
+<xs:element name="descrip" type="xs:string" minOccurs="0"/>
+<xs:element name="id_tipo_pago" type="xs:int" minOccurs="0"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarP">
+<xs:sequence>
+<xs:element name="dni" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarPResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:persona" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarroles">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listarrolesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rol" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rol">
+<xs:sequence>
+<xs:element name="estado" type="xs:boolean"/>
+<xs:element name="id_rol" type="xs:int"/>
+<xs:element name="rol" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarRUCProveedorPorID">
+<xs:sequence>
+<xs:element name="idProveedor" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarRUCProveedorPorIDResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarProveedores">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listarProveedoresResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:proveedores" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarProductos">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listarProductosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:producto" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="producto">
+<xs:sequence>
+<xs:element name="foto" type="xs:string" minOccurs="0"/>
+<xs:element name="id_clasificacion" type="tns:clasificacion" minOccurs="0"/>
+<xs:element name="id_producto" type="xs:int"/>
+<xs:element name="id_proveedor" type="tns:proveedores" minOccurs="0"/>
+<xs:element name="iva" type="xs:boolean"/>
+<xs:element name="precio_unitario" type="xs:double"/>
+<xs:element name="stock" type="xs:int"/>
+<xs:element name="unidad" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerTipoPagoPorId">
+<xs:sequence>
+<xs:element name="idTipoPago" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerTipoPagoPorIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tipoPago" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="registrarProveedorYClasificacion">
 <xs:sequence>
 <xs:element name="idProveedor" type="xs:int"/>
@@ -77,30 +370,6 @@
 </xs:complexType>
 
 <xs:complexType name="registrarProveedorYClasificacionResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="estadorol">
-<xs:sequence>
-<xs:element name="nombrerol" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="estadorolResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="hello">
-<xs:sequence>
-<xs:element name="name" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="helloResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
@@ -127,28 +396,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="persona">
-<xs:sequence>
-<xs:element name="personas" type="tns:persona" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-<xs:element name="apellido" type="xs:string" minOccurs="0"/>
-<xs:element name="celular" type="xs:string" minOccurs="0"/>
-<xs:element name="correo" type="xs:string" minOccurs="0"/>
-<xs:element name="dni" type="xs:string" minOccurs="0"/>
-<xs:element name="id_persona" type="xs:int"/>
-<xs:element name="nombre" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="listarPersonas">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="listarPersonasResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:persona" minOccurs="0" maxOccurs="unbounded"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="registrarTipoPago">
 <xs:sequence>
 <xs:element name="idTipoPago" type="xs:int" minOccurs="0"/>
@@ -163,14 +410,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="tipoPago">
-<xs:sequence>
-<xs:element name="descrip" type="xs:string" minOccurs="0"/>
-<xs:element name="id_tipo_pago" type="xs:int" minOccurs="0"/>
-<xs:element name="tipo" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="crearProducto">
 <xs:sequence>
 <xs:element name="idProducto" type="xs:int"/>
@@ -180,26 +419,6 @@
 <xs:element name="idClasificacion" type="tns:clasificacion" minOccurs="0"/>
 <xs:element name="idProveedor" type="tns:proveedores" minOccurs="0"/>
 <xs:element name="iva" type="xs:boolean"/>
-<xs:element name="foto" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="clasificacion">
-<xs:sequence>
-<xs:element name="grupo" type="xs:string" minOccurs="0"/>
-<xs:element name="id_clasificacion" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="proveedores">
-<xs:sequence>
-<xs:element name="clasificacion" type="tns:clasificacion" minOccurs="0"/>
-<xs:element name="correo" type="xs:string" minOccurs="0"/>
-<xs:element name="id_proveedor" type="xs:int"/>
-<xs:element name="moneda" type="xs:string" minOccurs="0"/>
-<xs:element name="pais" type="xs:string" minOccurs="0"/>
-<xs:element name="ruc" type="xs:string" minOccurs="0"/>
-<xs:element name="telefono" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -209,34 +428,15 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="registrarCompetenciaRol">
+<xs:complexType name="siexisterol">
 <xs:sequence>
-<xs:element name="idRol" type="xs:int"/>
-<xs:element name="nombreRol" type="xs:string" minOccurs="0"/>
-<xs:element name="estadoRol" type="xs:boolean"/>
-<xs:element name="idCompetencia" type="xs:int"/>
-<xs:element name="nombreCompetencia" type="xs:string" minOccurs="0"/>
-<xs:element name="estadoCompetencia" type="xs:boolean"/>
-<xs:element name="idClasificacion" type="xs:int"/>
-<xs:element name="grupoClasificacion" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="registrarCompetenciaRolResponse">
+<xs:complexType name="siexisterolResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="buscarP">
-<xs:sequence>
-<xs:element name="dni" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="buscarPResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:persona" minOccurs="0"/>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -253,25 +453,15 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="siexisterol">
+<xs:complexType name="buscarProveedorporRUC">
 <xs:sequence>
-<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="ruc" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="siexisterolResponse">
+<xs:complexType name="buscarProveedorporRUCResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="listarProveedores">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="listarProveedoresResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:proveedores" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="return" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -293,6 +483,65 @@
 </xs:complexType>
 
 <xs:complexType name="registrarUsuarioPersonaRolResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarRuc">
+<xs:sequence>
+<xs:element name="dni" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarRucResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarProveedor">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="ruc" type="xs:string" minOccurs="0"/>
+<xs:element name="telefono" type="xs:string" minOccurs="0"/>
+<xs:element name="pais" type="xs:string" minOccurs="0"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="moneda" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarProveedorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarProductoPorId">
+<xs:sequence>
+<xs:element name="idProducto" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarProductoPorIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:producto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarProductos">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="stock" type="xs:int"/>
+<xs:element name="preciou" type="xs:double"/>
+<xs:element name="unidad" type="xs:string" minOccurs="0"/>
+<xs:element name="clasificacion" type="tns:clasificacion" minOccurs="0"/>
+<xs:element name="proveedores" type="tns:proveedores" minOccurs="0"/>
+<xs:element name="iva" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarProductosResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean" minOccurs="0"/>
 </xs:sequence>
@@ -331,19 +580,6 @@
 <xs:element name="id_tipo_pago" type="tns:tipoPago" minOccurs="0"/>
 <xs:element name="ruc" type="xs:string" minOccurs="0"/>
 <xs:element name="total" type="xs:double" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="producto">
-<xs:sequence>
-<xs:element name="foto" type="xs:string" minOccurs="0"/>
-<xs:element name="id_clasificacion" type="tns:clasificacion" minOccurs="0"/>
-<xs:element name="id_producto" type="xs:int"/>
-<xs:element name="id_proveedor" type="tns:proveedores" minOccurs="0"/>
-<xs:element name="iva" type="xs:boolean"/>
-<xs:element name="precio_unitario" type="xs:double"/>
-<xs:element name="stock" type="xs:int"/>
-<xs:element name="unidad" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 

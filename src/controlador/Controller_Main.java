@@ -40,6 +40,14 @@ public class Controller_Main {
                 CerrarVentana();
             }
         });
+        
+        
+        main_View.getSalir().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                CerrarVentana();
+            }
+        });
     }
 
     public void showForm(Component com) {

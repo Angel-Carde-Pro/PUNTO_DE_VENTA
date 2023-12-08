@@ -33,22 +33,5 @@
         <delete dir="${build.generated.dir}/jax-wsCache/peticiones"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/ws"/>
     </target>
-    <target name="wsimport-client-peticiones_1" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/peticiones_1"/>
-        <property name="wsdl-peticiones_1" location="xml-resources/web-service-references/peticiones_1/wsdl/localhost_8080/Punto_de_Venta_Servidor/peticiones.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/peticiones_1" destdir="${build.generated.dir}/jax-wsCache/peticiones_1" wsdl="${wsdl-peticiones_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Punto_de_Venta_Servidor/peticiones?WSDL" xnocompile="true" xendorsed="true">
-            <depends file="${wsdl-peticiones_1}"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/peticiones_1"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/peticiones_1">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-peticiones_1" depends="-init-project">
-        <delete dir="${build.generated.dir}/jax-wsCache/peticiones_1"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/ws"/>
-    </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-peticiones, wsimport-client-peticiones_1"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-peticiones"/>
 </project>
